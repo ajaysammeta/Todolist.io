@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+ .a1{
+ border:1px solid orange;
+ min-height: 140px;
+ width: 100px;
+ }
+ </style>
+</head>
+<body>
+ <p class="copy-me">Lorem ipsum dolor sit amet.</p>
+ <p class="a1">Lorem ipsum dolor sit amet.</p>
+ <script>
+// const c=document.querySelector('.copy-me');
+// c.addEventListener('copy', function(e){
+// console.log("text has be copied");
+// })
+function fun(v){
+ var x=v.clientX;
+ var y=v.clientY;
+ var index=(" +x + ","+y+");
+ document.querySelector('.a1').innerHTML=index;
+}
+ var c1=document.querySelector('.a1');
+ c1.addEventListener('mousemove',function(e){
+fun(e);
+ })
+ </script>
+</body>
+</html>
